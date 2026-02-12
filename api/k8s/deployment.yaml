@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-api
-          image: devops:latest
+          image: arthuru0/arthuru0_devops:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080

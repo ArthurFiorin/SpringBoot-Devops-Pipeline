@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping("/health")
     public String health() {
-        return "OK";
+        return "API VERSION 2";
     }
 
 }

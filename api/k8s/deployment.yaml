@@ -14,26 +14,34 @@ spec:
     spec:
       containers:
         - name: spring-api
-          image: arthuru0/arthuru0_devops:latest
-          imagePullPolicy: Never
+          image: arthuru0/arthuru0_devops:v4
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          envFrom:
-            - configMapRef:
-                name: db-config
-            - secretRef:
-                name: db-secret
+          env:
+            # Forçando os nomes exatos que o Spring Boot 3 exige
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres.einaebrdojyexjjgsavr"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "NvKCHYfPkPzqMotd"
+            # Adicionando o Dialect manualmente para evitar o erro de 'metadata'
+            - name: SPRING_JPA_DATABASE_PLATFORM
+              value: "org.hibernate.dialect.PostgreSQLDialect"
           livenessProbe:
             httpGet:
               path: /users/health
               port: 8080
-            initialDelaySeconds: 90
-            periodSeconds: 10
+            initialDelaySeconds: 120
+            periodSeconds: 15
+            timeoutSeconds: 5
             failureThreshold: 6
           readinessProbe:
             httpGet:
               path: /users/health
               port: 8080
-            initialDelaySeconds: 60
-            periodSeconds: 5
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            timeoutSeconds: 5
             failureThreshold: 6

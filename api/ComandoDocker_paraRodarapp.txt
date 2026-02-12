@@ -2,7 +2,6 @@ docker run -p 8080:8080 `
 >>   --sysctl net.ipv6.conf.all.disable_ipv6=1 `
 >>   -e DB_URL="jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres" `
 >>   -e DB_USER=postgres.einaebrdojyexjjgsavr `
->>   -e DB_PASS=sambamiudinho `
 >>   devops
 
 

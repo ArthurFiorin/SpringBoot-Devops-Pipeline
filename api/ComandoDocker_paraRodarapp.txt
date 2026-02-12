@@ -1,0 +1,12 @@
+docker run -p 8080:8080 `
+>>   --sysctl net.ipv6.conf.all.disable_ipv6=1 `
+>>   -e DB_URL="jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres" `
+>>   -e DB_USER=postgres.einaebrdojyexjjgsavr `
+>>   -e DB_PASS=sambamiudinho `
+>>   devops
+
+
+Tive que usar o Transaction pooler do supabase devido aos bloqueios de ipv6 e ipv4 padrão da minha máquina,
+e o pooler é a única maneira de contornar isso.
+O pooler é um serviço que gerencia conexões de banco de dados e pode ser configurado para aceitar conexões IPv4,
+mesmo que o banco de dados esteja configurado para IPv6.

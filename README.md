@@ -23,7 +23,7 @@ Simulando um ambiente profissional moderno.
 - **Docker Compose**
 - **Kubernetes**
 - **GitHub Actions (CI/CD)**
-- **MySQL**
+- **PostgreSQL**
 - **Infraestrutura como Código (IaC)**
 
 ---

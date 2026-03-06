@@ -1,6 +1,6 @@
 # 🚀 Spring Boot DevOps Pipeline
 
-[![Build Status](https://github.com/[USUARIO]/[REPOSITORIO]/actions/workflows/main.yml/badge.svg)](https://github.com/[USUARIO]/[REPOSITORIO]/actions)
+[![Build Status](https://github.com/ArthurFiorin/SpringBoot-Devops-Pipeline/actions/workflows/main.yml/badge.svg)](https://github.com/ArthurFiorin/SpringBoot-Devops-Pipeline/actions)
 
 Projeto prático de DevOps focado na automação de ciclo de vida (CI/CD) e orquestração de containers.
 

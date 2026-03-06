@@ -1,39 +1,26 @@
 # 🚀 Spring Boot DevOps Pipeline
 
-Projeto prático focado na aplicação de conceitos de **DevOps** em um ambiente realista, utilizando uma aplicação backend em **Java + Spring Boot** como base para automação, containerização e entrega contínua.
+[![Build Status](https://github.com/ArthurFiorin/SpringBoot-Devops-Pipeline/actions/workflows/maven.yml/badge.svg)](https://github.com/ArthurFiorin/SpringBoot-Devops-Pipeline/actions)
 
----
+Projeto prático de DevOps focado na automação de ciclo de vida (CI/CD) e orquestração de containers.
 
-## 🎯 Objetivo do Projeto
-Demonstrar na prática a criação de um fluxo completo de:
-- Desenvolvimento de uma API backend
-- Containerização da aplicação
-- Orquestração de containers
-- Automação de build e deploy
-- Infraestrutura como código (IaC)
+## 🏗 Arquitetura do Sistema
+O sistema é composto por uma API Java 21, conteinerizada e orquestrada, com uma stack completa de observabilidade para monitoramento de métricas.
 
-Simulando um ambiente profissional moderno.
+## 🛠 Tecnologias Implementadas
+- **Linguagem:** Java 21
+- **CI/CD:** GitHub Actions
+- **Orquestração:** Kubernetes (Manifestos declarativos)
+- **Monitoramento:** Prometheus & Grafana
+- **Banco de Dados:** PostgreSQL
 
----
+## ⚙️ Funcionalidades Atuais
+- **Pipeline Automatizada:** Build, teste e deploy contínuo configurados via GitHub Actions.
+- **Infraestrutura Declarativa:** Configuração completa via arquivos YAML (Kubernetes).
+- **Stack de Observabilidade:** Monitoramento de métricas do sistema com Prometheus integrado ao Grafana.
+- **Gestão de Recursos:** Arquitetura otimizada para ser executável em ambientes locais com restrições de memória.
 
-## 🛠 Tecnologias Utilizadas
-- **Java 17**
-- **Spring Boot**
-- **Docker**
-- **Docker Compose**
-- **Kubernetes**
-- **GitHub Actions (CI/CD)**
-- **PostgreSQL**
-- **Infraestrutura como Código (IaC)**
-
----
-
-## ⚙️ Funcionalidades
-- API REST para testes de deploy
-- Build automático da aplicação
-- Geração de imagem Docker
-- Pipeline CI/CD automatizado
-- Deploy em cluster Kubernetes
-- Configuração de ambiente via código
-
----
+## 🚧 Roadmap (Próximos Passos)
+- [ ] **Infraestrutura como Código (IaC):** Automatizar o provisionamento da infraestrutura (Terraform/Ansible).
+- [ ] **Deploy em Nuvem Gerenciada:** Migrar o cluster local para um serviço gerenciado (EKS, GKE ou DOKS).
+- [ ] **Service Mesh:** Implementação de Istio para controle de tráfego.
